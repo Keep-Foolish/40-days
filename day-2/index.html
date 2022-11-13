@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            color: rgba(0, 0, 0, 0.4);
+        }
+        /* 标签选择器 */
+        .second-word{
+        background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+        /* 用渐变背景加上透明字体设置渐变字体颜色*/
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        font-size: 2em;
+        }
+        /* 类选择器 */
+        #third-word{
+            color: blue;
+        }
+        /* id选择器 */
+        .edit{
+            height: 32px;
+            width: 60px;
+            background-color: #42d392;
+        }
+        .edit:hover{
+            background-color: #647eff;
+        }
+        div>div>span{
+            color: rgb(55, 215, 22);
+        }
+        /* 选后代 */
+    </style>
+</head>
+<body>
+    <h1>大标题</h1>
+    <div>第一句话</div>
+    <span class="second-word">第二句话</span>
+    <p id="third-word">第三句话</p>
+    <!-- 不同标签的类 id 可以重复，任何一个标签都可以有无数id、无数个类 -->
+    <h2 style=" color:rgba(200,155,222,0.4)">
+        <!-- 内连样式，debug才用 -->
+        1.字体颜色
+        2.字体大小、类型
+        3.背景颜色
+        4.调整整个盒子模型（宽度，高度，边距）
+        5.调整鼠标样式
+    </h2>
+    <span class="edit">鼠标放这</span>
+    <div><span class="zhangwei">这里的样式单独放在了index.css中</span></div>
+    <div><div><span>哈哈哈</span></div></div>
+</body>
+</html>

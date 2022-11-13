@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            border: 0;
+        }
+        .content-box{
+            padding: 10px 20px 30px 40px;
+            /* 上右下左，顺时针旋转的顺序 */
+            border:5px solid chocolate;
+        }
+        .boder-box{
+            padding: 10px;
+        /* 宽度包括内容，设置border会压缩内容 */
+        }
+        .inline{
+            display: inline-block;
+            /* 设置成块级元素才能设置宽高 */
+            height: 100px;
+            margin: 30px;
+            border: 3px solid greenyellow;
+        }
+        .span{
+            margin-top: 100px;
+            /* 垂直方向无效 */
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">标准盒模型</div>
+    <div class="border-box">IE盒模型</div>
+    <span class="inline">行内块标签</span>
+    <span class="inline">行内块标签</span>
+    <span class="inline">行内快标签</span>
+    <div><span class="span">这是行内元素，垂直方向margin无效。</span></div>
+</body>
+</html>
