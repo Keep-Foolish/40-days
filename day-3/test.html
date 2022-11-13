@@ -13,31 +13,51 @@
             text-align: center; /** 块级元素内容水平居中**/
             font-size: 12px;
             width:50px;
+            background-color: aqua;
         }
         .tap-element:hover{
             cursor: pointer;
-            color: #2e313a;
+            color: chocolate;
             font-size: 20px;
             border-bottom: 2px solid #007fff;
+            background-color: bisque;
         }
         /* 定位 */
         .tap-first{position: relative;
             top:-5px;
-            left:50px;
+            left:30px;
             /* 两个边距就可以完成定位了 */
+            z-index: 1;
         }
         .tap-second{
             position: absolute;
-            top:100px;
+            /* 向上没有找到非static定位的父级元素则相对于body定位 */
+            bottom:100px;
+        }
+        .tap-third{
+            position: fixed;
+            bottom:40px;
+        }
+        .black{
+            position: relative;
+            height: 100px;
+            background-color: black;
+            bottom:10px;
+        }
+        .block{
+            height: 1000px;
         }
     </style>
 </head>
 <body>
+    <div class="block">
     <span class="tap-element">首页</span>
-    <span class="tap-element tap-first">沸点</span>
+    <span class="tap-element tap-first ">沸点</span>
     <span class="tap-element tap-second">课程</span>
-    <span class="tap-element">直播</span>
-    <span class="tap-element">活动</span>
+    <span class="tap-element tap-third">直播</span>
+    <span class="tap-element tap-forth">活动</span>
     <span class="tap-element">商城</span>
+    <div class="black"></div>
+    </div>
 </body>
 </html>
