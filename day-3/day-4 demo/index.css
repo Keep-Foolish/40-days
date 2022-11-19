@@ -29,6 +29,10 @@ html,body,.container{
     justify-content: space-around;
 }
 
+.header:hover{
+    cursor: pointer;
+}
+
 .top{
     width: 224px;
     height: 48px;
@@ -120,6 +124,7 @@ html,body,.container{
 
 .body > div:hover {
     background-color: rgba(30,128,255,0.1);
+    cursor: pointer;
 }
 
 .footer{
